@@ -1,11 +1,3 @@
-import sys
-
-if sys.version_info[0] == 2:
-    from string import maketrans
-else:
-    maketrans = str.maketrans
-
-DNA_A_RNA = maketrans("AGCT", "UCGA")
-
 def to_rna(dna_strand):
-    return dna_strand.translate(DNA_A_RNA)
+    dic = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'}
+    return '' .join([dic[x]for x in dna_strand])
