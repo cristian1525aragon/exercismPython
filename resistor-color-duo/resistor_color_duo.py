@@ -3,9 +3,5 @@ colors_code = {'black': 0, 'brown': 1, 'red': 2, 'orange': 3,
                'grey': 8, 'white': 9}
 
 
-def color_code(color):
-    return colors_code[color]
-
-
-def colors():
-    return list(colors_code.keys())
+def value(colors):
+    return int(''.join([str(colors_code[x]) for x in colors[:2]]))
